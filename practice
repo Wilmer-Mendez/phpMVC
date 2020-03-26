@@ -1,0 +1,33 @@
+<?php
+
+class User {
+    public $name;
+    public $age;
+
+    public function __construct($name, $age) {
+        echo 'Class: ' . __CLASS__ . ' created';
+        $this->name = $name;
+        $this->age = $age;
+    }
+
+    public function sayHello() {
+        return "Hello " . $this->name . " You're age is: " . $this->age . " ";
+
+
+
+    }
+    public function __destruct(){
+        echo 'adsasdasd ';
+    }
+
+
+}
+
+$user1 = new User('Wilmer', 23);
+echo $user1->sayHello();
+
+$user2 = new User('Wilmer', 23);
+echo $user2->sayHello();
+
+$user4 = new User('Wilmer', 23);
+echo $user4->sayHello();
